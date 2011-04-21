@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  has_vc: false
+  has_projector: false
+  capacity: 1
+
+two:
+  name: MyString
+  has_vc: false
+  has_projector: false
+  capacity: 1

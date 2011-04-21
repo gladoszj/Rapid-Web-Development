@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  booked_at: 2011-04-20 14:28:39
+  booked_from: 2011-04-20 14:28:39
+  booked_to: 2011-04-20 14:28:39
+  is_vc: false
+  expected_attendees: 1
+  notes: MyString
+
+two:
+  name: MyString
+  booked_at: 2011-04-20 14:28:39
+  booked_from: 2011-04-20 14:28:39
+  booked_to: 2011-04-20 14:28:39
+  is_vc: false
+  expected_attendees: 1
+  notes: MyString

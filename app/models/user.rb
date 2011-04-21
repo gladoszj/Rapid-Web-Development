@@ -9,6 +9,9 @@ class User < ActiveRecord::Base
 
   before_save :encrypt_password
 
+  has_many :updated_bookings, :class_name => "Booking", :foreign_key => :updated_by_id
+  has_many :created_bookings, :class_name => "Booking", :foreign_key => :created_by_id
+
   def self.authenticate(email, password)
     user = find_by_email(email)
     if user && user.password_hash == BCrypt::Engine.hash_secret(password, user.password_salt)

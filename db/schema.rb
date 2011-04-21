@@ -10,7 +10,37 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110419135126) do
+ActiveRecord::Schema.define(:version => 20110420122839) do
+
+  create_table "bookings", :force => true do |t|
+    t.datetime "booked_at",          :null => false
+    t.datetime "booked_from",        :null => false
+    t.datetime "booked_to",          :null => false
+    t.boolean  "is_vc",              :null => false
+    t.integer  "expected_attendees", :null => false
+    t.string   "notes"
+    t.integer  "updated_by_id"
+    t.integer  "created_by_id",      :null => false
+    t.integer  "location_id",        :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "locations", :force => true do |t|
+    t.string   "name",       :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "rooms", :force => true do |t|
+    t.string   "name",          :null => false
+    t.boolean  "has_vc",        :null => false
+    t.boolean  "has_projector", :null => false
+    t.integer  "capacity",      :null => false
+    t.integer  "location_id",   :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email"
