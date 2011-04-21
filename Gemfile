@@ -34,3 +34,5 @@ gem "jdbc-sqlite3"
 gem "jruby-openssl"
 gem "torquebox-rake-support"
 gem "torquebox"
+
+gem 'bcrypt-ruby', :require => 'bcrypt'

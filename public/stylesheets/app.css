@@ -2,11 +2,10 @@
     padding: 5px;
 }
 
-.alert {
+#flash_alert {
     color: red;
 }
-
-.notice {
+#flash_notice {
     color: green;
 }
 

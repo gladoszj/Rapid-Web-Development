@@ -15,9 +15,13 @@
 
   <div id="middle" class="row">
     <div id="left" class="threecol">
-        menu
+      menu
     </div>
     <div id="center" class="ninecol last">
+      <% flash.each do |name, msg| %>
+          <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      <% end %>
+
       <%= yield %>
     </div>
   </div>
@@ -26,12 +30,6 @@
     footer
   </div>
 
-  <% if (notice) %>
-      <div class="notice message"/>
-  <% end %>
-  <% if (alert) %>
-      <div class="alert message"/>
-  <% end %>
 
 </div>
 </body>
