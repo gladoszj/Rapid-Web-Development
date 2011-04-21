@@ -4,11 +4,35 @@
   <title>BookARoom</title>
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
+  <%= javascript_include_tag "css3-mediaqueries" %>
   <%= csrf_meta_tag %>
 </head>
 <body>
+<div class="container">
+  <div id="header" class="row">
+    header
+  </div>
 
-<%= yield %>
+  <div id="middle" class="row">
+    <div id="left" class="threecol">
+        menu
+    </div>
+    <div id="center" class="ninecol last">
+      <%= yield %>
+    </div>
+  </div>
 
+  <div id="footer" class="row">
+    footer
+  </div>
+
+  <% if (notice) %>
+      <div class="notice message"/>
+  <% end %>
+  <% if (alert) %>
+      <div class="alert message"/>
+  <% end %>
+
+</div>
 </body>
 </html>
